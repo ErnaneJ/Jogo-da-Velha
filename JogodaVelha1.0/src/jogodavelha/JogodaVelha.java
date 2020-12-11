@@ -43,16 +43,20 @@ public class JogodaVelha {
     }
     
     public static void desenha(int x, int y) { 
-	if (casa[x][y] == 1) { 
-            // campo marcado pelo jogador 1 aparece com “X” 
-            System.out.print("X"); 
-	} else if (casa[x][y] == 2) { 
-            // campo marcado pelo jogador 2 aparece com “O” 
-            System.out.print("O"); 
-	} else { 
-            // campo não marcado aparece em branco (“ ”) 
-            System.out.print(" "); 
-	} 
+        switch (casa[x][y]) {
+            case 1:
+                // campo marcado pelo jogador 1 aparece com “X”
+                System.out.print("X");
+                break;
+            case 2:
+                // campo marcado pelo jogador 2 aparece com “O”
+                System.out.print("O");
+                break;
+            default: 
+                // campo não marcado aparece em branco (“ ”)
+                System.out.print(" ");
+                break;
+        }
     }
     
     public static void jogo() { 
